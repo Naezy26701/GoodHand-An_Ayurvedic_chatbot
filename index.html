@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GoodHand | Home</title>
-    <link rel="shortcut icon" href="fav.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="img/fav.png" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
@@ -13,12 +13,15 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+     <!-- Shery JS CSS CDN    -->
+     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> 
     <link rel="stylesheet" href="style.css" />
+   
   </head>
   <body>
     <div class="nav">
       <div class="nav-part1">
-        <img src="logo.png" alt="" />
+        <img src="img/logo.png" alt="" class="magnet" />
       </div>
       <div class="nav-part2">
         <div class="link">
@@ -27,11 +30,15 @@
           <a href="#">Contact</a>
         </div>
 
-        <div class="icons">
+        <div class="icons magnet">
           <i class="ri-menu-line"></i>
           <i class="ri-user-line"></i>
         </div>
       </div>
+    </div>
+
+    <div class="bg">
+      <img src="img/bg2.jpg" alt="">    
     </div>
 
     <div class="cursor"></div>
@@ -51,47 +58,118 @@
             healthier you, effortlessly. Try GOOD HAND today – Your path to
             vitality starts here!
         </p>
+
+        <div class="page2">
+          <div class="scroller">
+            <div class="scroller-in">
+              <h4>WELCOME</h4>
+              <h4>TO</h4>
+              <h4>GoodHand</h4>
+              <h4>AN AYURVEDIC</h4>
+              <h4>CHATBOT</h4>
+            </div>
+            <div class="scroller-in">
+              <h4>WELCOME</h4>
+              <h4>TO</h4>
+              <h4>GoodHand</h4>
+              <h4>AN AYURVEDIC</h4>
+              <h4>CHATBOT</h4>
+            </div>          
+          </div>  
+        </div>
+
+        <div class="about-us">
+          <img src="img/img1.jpg" alt="" />
+          <div class="about-us-in">
+            <h3>ABOUT US</h3>
+            <p>
+              Welcome to our Ayurvedic chatbot website, your virtual hub for holistic healing and natural remedies.
+              Powered by advanced AI technology, our chatbot provides personalized ayurvedic solutions for a wide range of symptoms and ailments. 
+              Whether you're seeking relief from stress, digestive issues, or skin problems, our chatbot is here to guide you towards wellness 
+              with time-tested ayurvedic remedies. Explore our virtual wellness center and embark on a journey towards optimal health and vitality.
+            </p>
+          </div>
+          <img src="img/img2.jpg" alt="" />
+        </div>
+
         
-        <div class="line"></div>
+        <div class="cards-container">
+          <div class="card" id="card1">
+            <div class="overlay">
+              <h4>Personalized Guidance</h4>
+              <p>
+                Our Ayurvedic chatbot offers personalized guidance by analyzing your unique symptoms and health concerns. Through sophisticated algorithms, it provides tailored ayurvedic remedies and recommendations,
+                ensuring that you receive targeted solutions that address your individual needs and promote overall well-being in a holistic manner.
+              </p>
+            </div>
+          </div>
+          <div class="card" id="card2">
+            <div class="overlay">
+                <h4>Accessibility</h4>
+                <p>
+                  With our Ayurvedic chatbot, you have round-the-clock access to personalized support and advice wherever you are. Say goodbye to appointment delays and waiting times; simply open the chatbot on your device
+                  for instant guidance on ayurvedic remedies tailored to your symptoms and health concerns, ensuring timely and convenient assistance.
+                </p>
+              </div>
+          </div>
+          <div class="card" id="card3">
+            <div class="overlay">
+                <h4>Holistic Approach</h4>
+                <p>
+                  Experience comprehensive wellness through the holistic healing principles of Ayurveda, an ancient tradition that harmonizes mind, body, and spirit. Ayurvedic remedies aim to restore balance by addressing root causes rather than just symptoms, 
+                  fostering overall well-being and vitality for a harmonious and fulfilling life.
+                </p>
+              </div>
+          </div>
+        </div>
+
       </div>
+
 
       <footer>
         <div class="copyright">
           <p>&copy;2024 GoodHand All Rights Reserved</p>
         </div>
       </footer>
-    </div>
 
-    <!-- locomotive js -->
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    
+ <!-- locomotive js -->
+ <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
 
-    <!-- gsap -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
-      integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+ <!-- gsap -->
+ <script
+   src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+   integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+   crossorigin="anonymous"
+   referrerpolicy="no-referrer"
+ ></script>
 
-    <!-- ScrollTrigger -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"
-      integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+ <!-- ScrollTrigger -->
+ <script
+   src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"
+   integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
+   crossorigin="anonymous"
+   referrerpolicy="no-referrer"
+ ></script>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"
-      integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+ <script
+   src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"
+   integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
+   crossorigin="anonymous"
+   referrerpolicy="no-referrer"
+ ></script>
+
+ <!-- Three.js is needed for 3d Effects -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+ <!-- Shery JAVASCRIP CDN -->
+ <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script> 
+
   
     <script src="script.js"></script>
    
-
+    <!-- chatbot script -->
     <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-<script src="https://mediafiles.botpress.cloud/6bf4682c-a2f1-4faf-8cec-bab7949c6c63/webchat/config.js" defer></script>
+    <script src="https://mediafiles.botpress.cloud/6bf4682c-a2f1-4faf-8cec-bab7949c6c63/webchat/config.js" defer></script>
   </body>
 </html>
