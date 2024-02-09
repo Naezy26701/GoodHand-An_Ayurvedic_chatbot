@@ -6,6 +6,11 @@
     color: white;
 }
 
+*::selection{
+    background-color: white;
+    color: black;
+}
+
 html,body{
     height: 100%;
     width: 100%;
@@ -25,16 +30,24 @@ body{
     
 }
 
-*::selection{
-    background-color: white;
-    color: black;
+.bg img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
 }
+
+.main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.597);
+}
+
 
 .nav{
     height: 100px;
     width: 100%;
     position: fixed;
-    /* background-color: blueviolet; */
     z-index: 99;
     padding: 10px 30px;
     display: flex;
@@ -109,6 +122,156 @@ body{
         
 }
 
+.scroller{
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+.scroller::-webkit-scrollbar{
+    display: none;
+}
+
+.scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.scroller h4{
+    display: inline-block;
+    font-size: 100px;
+    font-weight: 900;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-right: 10px;
+    color: transparent;
+    transition: all linear 0.5s;
+    -webkit-text-stroke: 1px #95C11E;
+}
+
+.scroller h4:hover{
+    color: #95C11E;
+}
+
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }    
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.about-us{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 50px;
+    position: relative;
+    z-index: 10;
+    margin-top: 30px;
+}
+
+.about-us img{
+    height: 350px;
+    width: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.about-us-in{
+    width: 50%;
+    text-align: center;    
+}
+
+.about-us-in h3{
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    
+}
+
+.about-us-in p{
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.cards-container{
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    position: relative;
+    z-index: 10;
+}
+
+.card{
+    height: 90%;
+    width: 24%;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#card1{
+    background-image: url("img/img3.jpg");
+}
+#card2{
+    background-image: url("img/img4.jpg");
+}
+#card3{
+    background-image: url("img/img5.jpg");
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to left bottom, #119F3A, #A3D421);
+    padding: 30px;
+    padding-top: 50px;
+    opacity: 0;
+    transition: all ease 0.6s;
+    
+}
+
+.card:hover .overlay{
+    opacity: 1;
+}
+
+.overlay h4{
+    color: black;
+    font-size: 20px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: 800;
+    
+   
+}
+
+.overlay p{
+    margin-top: -55px;
+    color: black;
+    font-size: 15px;
+    line-height: 25px;
+
+}
+
+.card:hover{
+    transform: rotate3d(-1, 1, 0, 20deg);
+}
 
 footer{
     display: flex;
