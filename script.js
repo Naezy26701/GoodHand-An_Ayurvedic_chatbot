@@ -61,7 +61,6 @@ function navbarAnimation(){
 navbarAnimation()
 
 
-
 // loadingAnimation
 function loadingAnimation(){
     gsap.from(".page1 h1", {
@@ -87,5 +86,24 @@ function loadingAnimation(){
     })
  
 }
+
+gsap.to(".main",{
+    backgroundColor: "#000",
+    scrollTrigger: {
+        trigger: ".main",
+        scroller: "body",
+        // markers: true
+        start: "top -25%",
+        end: "top -70%",
+        scrub: 2
+    }
+})
+
+
 loadingAnimation()
+
+//mouse cursor animations
+Shery.mouseFollower();
+//logo animation
+Shery.makeMagnet(".magnet");
 
