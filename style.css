@@ -187,6 +187,17 @@ body{
     object-fit: cover;
 }
 
+.about-us img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.about-us img:hover{
+	-webkit-transform: scale(1.3);
+	transform: scale(1.15);
+}
+
 .about-us-in{
     width: 50%;
     text-align: center;    
