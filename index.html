@@ -25,9 +25,9 @@
       </div>
       <div class="nav-part2">
         <div class="link">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
+          <a href="#" id="home">Home</a>
+          <a href="#" id="about">About</a>
+          <a href="#" id="contact">Contact</a>
         </div>
 
         <div class="icons magnet">
@@ -42,6 +42,10 @@
     </div>
 
     <div class="cursor"></div>
+
+    <div class="loader">
+      <h3>Welcome To GoodHand 🤝</h3>
+    </div>
 
     <div class="main">
       <div class="page1">
@@ -99,7 +103,7 @@
             <div class="overlay">
               <h4>Personalized Guidance</h4>
               <p>
-                Our Ayurvedic chatbot offers personalized guidance by analyzing your unique symptoms and health concerns. Through sophisticated algorithms, it provides tailored ayurvedic remedies and recommendations,
+                Our Ayurvedic chatbot offers personalized guidance by analyzing your unique symptoms and health concerns. It provides tailored ayurvedic remedies and recommendations,
                 ensuring that you receive targeted solutions that address your individual needs and promote overall well-being in a holistic manner.
               </p>
             </div>
@@ -171,6 +175,25 @@
    
     <!-- chatbot script -->
     <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-    <script src="https://mediafiles.botpress.cloud/6bf4682c-a2f1-4faf-8cec-bab7949c6c63/webchat/config.js" defer></script>
+    <script>
+      window.botpressWebChat.init({
+          "composerPlaceholder": "Chat with GOOD HAND",
+          "botConversationDescription": "An Ayurvedic Chatbot",
+          "botId": "6bf4682c-a2f1-4faf-8cec-bab7949c6c63",
+          "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+          "messagingUrl": "https://messaging.botpress.cloud",
+          "clientId": "6bf4682c-a2f1-4faf-8cec-bab7949c6c63",
+          "webhookId": "bd747f68-7f51-463c-8e37-524447f9b093",
+          "lazySocket": true,
+          "themeName": "prism",
+          "botName": "GOOD HAND",
+          "stylesheet": "https://webchat-styler-css.botpress.app/prod/code/e09512fb-cad9-4627-bcfd-65b083e2c8b0/v18619/style.css",
+          "frontendVersion": "v1",
+          "useSessionStorage": true,
+          "enableConversationDeletion": true,
+          "theme": "prism",
+          "themeColor": "#2563eb"
+      });
+    </script>
   </body>
 </html>
