@@ -29,8 +29,53 @@ ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
 // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
 ScrollTrigger.refresh();
+
+
 }
 locoScroll()
+
+document.querySelector(".nav-part2 .link #home").addEventListener("click", () => {
+  scroll.scrollTo(".page1");
+});
+document.querySelector(".nav-part2 .link #about").addEventListener("click", () => {
+  scroll.scrollTo(".about-us");
+});
+document.querySelector(".nav-part2 .link #contact").addEventListener("click", () => {
+  scroll.scrollTo(".copyright");
+});
+
+var tl = gsap.timeline()
+
+tl.from(".loader h3",{
+  x: 40,
+  opacity: 0,
+  stagger: 0.1
+})
+
+tl.to(".loader h3",{
+  opacity:0,
+  x: -10,
+  duration: 2,
+  stagger: 0.1
+})
+
+tl.to(".loader",{
+  opacity: 0
+})
+
+tl.from(".page1 > h1, h2, p",{
+  y:100,
+  opacity:0,
+  stagger:0.2,
+  duration: 0.8,
+  delay: 0.2
+})
+
+tl.to(".loader",{
+  display: "none"
+})
+
+
 
 // navbarAnimation
 function navbarAnimation(){
@@ -62,30 +107,30 @@ navbarAnimation()
 
 
 // loadingAnimation
-function loadingAnimation(){
-    gsap.from(".page1 h1", {
-        y:100,
-        opacity: 0,
-        delay: 0.6,
-        duration: 0.9,
-        stagger: 0.2
-    })
-    gsap.from(".page1 h2", {
-        y:100,
-        opacity: 0,
-        delay: 0.7,
-        duration: 0.9,
-        stagger: 0.2
-    })
-    gsap.from(".page1 p", {
-        y:100,
-        opacity: 0,
-        delay: 0.8,
-        duration: 0.9,
-        stagger: 0.2
-    })
+// function loadingAnimation(){
+//     gsap.from(".page1 h1", {
+//         y:100,
+//         opacity: 0,
+//         delay: 0.6,
+//         duration: 0.9,
+//         stagger: 0.2
+//     })
+//     gsap.from(".page1 h2", {
+//         y:100,
+//         opacity: 0,
+//         delay: 0.7,
+//         duration: 0.9,
+//         stagger: 0.2
+//     })
+//     gsap.from(".page1 p", {
+//         y:100,
+//         opacity: 0,
+//         delay: 0.8,
+//         duration: 0.9,
+//         stagger: 0.2
+//     })
  
-}
+// }
 
 gsap.to(".main",{
     backgroundColor: "#000",
@@ -98,7 +143,6 @@ gsap.to(".main",{
         scrub: 2
     }
 })
-
 
 loadingAnimation()
 
